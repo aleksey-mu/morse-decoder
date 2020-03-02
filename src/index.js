@@ -64,8 +64,6 @@ function decode(expr) {
                 morseCharArr.push('.');
             } else if (morseSymbol ===  '11') {
                 morseCharArr.push('-');
-            } else if (morseSymbol ===  '**') {
-                morseCharArr.push(' ');
             }
         }
         morseArr.push(MORSE_TABLE[morseCharArr.join('')] || ' ');
