@@ -35,7 +35,6 @@ const MORSE_TABLE = {
     '---..':  '8',
     '----.':  '9',
     '-----':  '0',
-    '     ':  ' '
 };
 
 function decode(expr) {
@@ -68,9 +67,8 @@ function decode(expr) {
             } else if (morseSymbol ===  '**') {
                 morseCharArr.push(' ');
             }
-            
         }
-        morseArr.push(MORSE_TABLE[morseCharArr.join('')]);
+        morseArr.push(MORSE_TABLE[morseCharArr.join('')] || ' ');
     }
    
     return morseArr.join('');
